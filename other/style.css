@@ -1,0 +1,42 @@
+.contact-form{
+    width:100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.contact-form input{
+    width: 80%;
+    margin: 6px 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+
+.contact-form select {
+    width: 80%;
+    margin: 6px 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.contact-form textarea{
+    width: 80%;
+    margin: 6px 20px;
+}
+
+#search-box{
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 8px 25px;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.post input, select, textarea{
+    width: 98%;
+    padding:2px;
+    margin: 4px 0px;
+}

@@ -85,164 +85,59 @@
         </nav>
     </section>
 
- 
-    <!-- image slider code section -->
-    <section>
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <ul class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
-              <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="../img/img1.jpeg" alt="Los Angeles" width="1100" height="500">
-                <div class="carousel-caption">
-                  <h3></h3>
-                  <p></p>
-                </div>   
-              </div>
-              <div class="carousel-item">
-                <img src="../img/img2.jpeg" alt="Chicago" width="1100" height="500">
-                <div class="carousel-caption">
-                  <h3></h3>
-                  <p></p>
-                </div>   
-              </div>
-              <div class="carousel-item">
-                <img src="../img/img3.jpeg" alt="New York" width="1100" height="500">
-                <div class="carousel-caption">
-                  <h3></h3>
-                  <p></p>
-                </div>   
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
-          </div>
-    </section>
-<br>
-
-     <!-- Content Section -->
-     <section>
-        <div class="container">
-        <h3>News Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae, ipsa reiciendis iure eius, illum tempore voluptatibus ab, ex officia ipsum vero aspernatur! Quae ipsam consequuntur iusto explicabo earum. Voluptate.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, veniam quasi iusto officiis dolore ipsum?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil sit quidem? Consequatur perspiciatis quia hic quos velit temporibus natus ex commodi vitae autem?</p>
-        </div>
-    </section>
-
-    <!-- short form news card section -->
+    <!--  News Post content code -->
     <section>
         <div class="container">
-            <div class="row" id="accordion">
-                <div class="col-md-6 ">
-                    <div class="card">
-                    <div class="card-header">
-                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                        News heading #1
-                        </a>
-                    </div>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                        <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-md-6 ">
-                    <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                        News heading #2
-                    </a>
-                    </div>
-                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 ">
-                    <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                        News heading #3
-                        </a>
-                    </div>
-                    <div id="collapseThree" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                    </div>
-                </div>
+            <div class="row justify-content-center text-center">
+                <div class="col-md-6 bg-primary p-1 text-white h5"> Add Post</div>
             </div>
-            </div>
-        </div>
-    </section>
+            <div class="row justify-content-center">
+                <div class="col-md-6 post">
+                    <!-- Post Form Start -->
+                    <form action="">
+                        <!-- news Type Selection filed -->
+                        <select name="" id="">
+                            <option value=""> News Type</option>
+                            <option value="it">Technology</option>
+                            <option value="bu">Business</option>
+                            <option value="en">Entertainment</option>
+                            <option value="sp">Sports</option>
+                            <option value="po">Politics</option>
+                            <option value="Ot">Other</option>
+                        </select>
 
-    <!-- Subscribe form section -->
-    <section>
-        <div class="contaioner m-2">
-            <div class="row text-center justify-content-around">
-                <div class="col-md-5">
-                    <form action="" class="subscribe-form">
-                        <input type="email" name="subscriber-email" placeholder="Email" required>
-                        <button  type="submit">Subscribe</button>
+                        <!-- news Posting Date filed -->
+                        <input type="date" name="date" id=""  >
+
+                        <!-- Heading/title Input filed -->
+                        <input type="text" name="title" id="" placeholder="Heading/title">
+
+                        <!-- details  input filed-->
+                        <textarea name="details" id="" cols="40" rows="4" placeholder="Type the news"></textarea>
+                        
+                        <!-- img/video uploading filed -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="file" name="add-img" id="">
+                            </div>
+                            <div class="col-md-6 pt-2">
+                                <small>Allow .jpg, .jpeg, .png file</small>
+                            </div>
+                        </div>
+
+                        <!-- Post and Form Reset Button  -->
+                        <div class="row justify-content-between">
+                            <div class="col-md-3 col-5 m-3 btn btn-danger" type="reset"><strong>Reset</strong></div>
+                            <div class="col-md-3 col-5 m-3 btn btn-success" type="submit" m-3><strong>Post</strong></div>
+                        </div>  
                     </form>
-                </div>
-                <div class="col-md-3">
-                    <div class="alert alert-success alert-dismissible fade show">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Success!</strong> 
-                    </div>
-
-                    <div class="alert alert-danger alert-dismissible fade show">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Danger!</strong> 
-                    </div>
-                      
+                    <!-- Closed Post Form -->
                 </div>
             </div>
         </div>
     </section>
-
-
-     <!-- short form news card section -->
-        <section>
-            <div class="container">
-                <div class="row" id="accordion">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-header">
-                                <a class="card-link" data-toggle="collapse" href="#Comments">
-                                User Comments
-                                </a>
-                            </div>
-                            <div id="Comments" class="collapse show" data-parent="#accordion">
-                                <div class="card-body">
-                                    <!-- comment card code -->
-                                    <div style="margin: 2px; padding: 2px;">
-                                        <div style="float: left; margin-right: 20px;"><img src="" alt="user" width="30px" height="30px"></div>
-                                        <div><strong> Hi Tech Radar !</strong> </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
+ 
+  
     <!-- Footer Section Code -->
     <section>
         <div class="container bg-dark">
@@ -283,5 +178,12 @@
     </section>
 </body>
 </html>
-
-
+<style>
+   
+    .post input, select, textarea{
+        width: 98%;
+        padding:2px;
+        margin: 4px 0px;
+    }
+    
+</style>
