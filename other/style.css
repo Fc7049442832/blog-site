@@ -40,3 +40,21 @@
     padding:2px;
     margin: 4px 0px;
 }
+
+
+.news-card-p{
+    min-height: 100%;
+    max-height: 60px;
+    padding: 10px;
+    text-align: justify;
+    overflow: auto;
+    
+}
+
+.back-btn{
+    width: 60px;
+    border-radius: 20px;
+    padding: 4px;
+    margin: 5px;
+   }
+    

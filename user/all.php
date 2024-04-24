@@ -15,6 +15,7 @@
 <body>
 <?php 
 include '../component/navbar.php';
+include '../db/datafetch.php';
 ?>
 
 <section>
@@ -29,39 +30,32 @@ include '../component/navbar.php';
         <!-- Content Start  -->
         <div class="row justify-content-around">
             <!-- looping -->
-            <div class="col-md-5  mt-4">
-                <a href="" style="text-decoration: none; color: rgb(54, 54, 54); float-left">
-                    <div class="row">
-                        <div class="col-5">
-                            <img src="../img/img4.jpeg" alt="" width="100%" min-height="100%" max-height="auto" >
-                        </div>
-                        <div class="col-7">
-                            <strong>heading</strong> : 
-                            <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, reprehenderit.</small>
-                            <div class="date">21.04.2024</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        
-            <div class="col-md-5  mt-4">
-                <a href="" style="text-decoration: none; color: rgb(54, 54, 54); float-left">
-                    <div class="row">
-                        <div class="col-5">
-                            <img src="../img/img4.jpeg" alt="" width="100%" min-height="100%" max-height="auto" >
-                        </div>
-                        <div class="col-7">
-                            <strong>heading</strong> : 
-                            <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, reprehenderit.</small>
-                            <div class="date">21.04.2024</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        
-
-
+            <?php
+            // Output fetched data
+            foreach ($data as $row) {
             
+                $type = $row['type'];
+                $img  = $row['img'] ;
+                $title  = $row['title'] ;
+                $news  = $row['post-no'] ;
+                $date  = $row['date'] ;
+            ?>
+            <div class="col-md-5  mt-4">
+                <a href="news.php?name=<?php echo $news; ?>" style="text-decoration: none; color: rgb(54, 54, 54); float-left">
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="../img/<?php echo $img; ?>" alt="" width="100%" min-height="100%" max-height="auto" >
+                        </div>
+                        <div class="col-7">
+                            <strong><?php echo $type; ?></strong> : 
+                            <small><?php echo $title; ?></small>
+                            <div class="date"><?php echo $date; ?></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- loop end -->
+            <?php } ?>          
 
         </div>
     </div>

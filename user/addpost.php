@@ -21,20 +21,20 @@
                     <form action="../db/submitPost.php" method="post" enctype="multipart/form-data"  id="contactForm">
                         <!-- news Type Selection filed -->
                         <select name="type" id="">
-                            <option value=""> News Type</option>
-                            <option value="it">Technology</option>
-                            <option value="bu">Business</option>
-                            <option value="en">Entertainment</option>
-                            <option value="sp">Sports</option>
-                            <option value="po">Politics</option>
-                            <option value="Ot">Other</option>
+                            <option disabled >Select Category </option>
+                            <option value="IT">Technology</option>
+                            <option value="Biz">Business</option>
+                            <option value="Entmt">Entertainment</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Politics">Politics</option>
+                            <option value="Other">Other</option>
                         </select>
 
                         <!-- Heading/title Input filed -->
-                        <input type="text" name="title" id="" placeholder="Heading/title">
+                        <input type="text" name="title" id="" placeholder="Title">
 
                         <!-- news input filed-->
-                        <textarea name="news" id="" cols="40" rows="4" placeholder="Type the news"></textarea>
+                        <textarea name="news" id="" cols="40" rows="4" placeholder="Description"></textarea>
                         
                         <!-- img/video uploading filed -->
                         <div class="row">

@@ -47,4 +47,29 @@
     }
     
 
+    // Data fetch single record (Last Entry)
+
+function fetchLastEntry($tableName, $orderByColumn) {
+    // Database connection parameters
+    include 'config.php';
+
+    // Prepare the query
+    $query = "SELECT * FROM $tableName ORDER BY $orderByColumn DESC LIMIT 1";
+    $stmt = $pdo->prepare($query);
+
+    // Execute the query
+    $stmt->execute();
+
+    // Fetch the last entry
+    $lastEntry = $stmt->fetch();
+
+    // Close the cursor
+    $stmt->closeCursor();
+
+    // Return the last entry
+    return $lastEntry;
+}
+
+
+
     

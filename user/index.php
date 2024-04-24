@@ -112,134 +112,61 @@
             </a>
           </div>
     </section>
-<br>
-
-     <!-- Content Section -->
-     <section>
-        <div class="container">
-        <h3>News Heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae, ipsa reiciendis iure eius, illum tempore voluptatibus ab, ex officia ipsum vero aspernatur! Quae ipsam consequuntur iusto explicabo earum. Voluptate.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, veniam quasi iusto officiis dolore ipsum?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nihil sit quidem? Consequatur perspiciatis quia hic quos velit temporibus natus ex commodi vitae autem?</p>
-        </div>
-    </section>
-
-    <!-- short form news card section -->
+<br>    
+    <!-- short form Recently News card section -->
     <section>
-    <div class="container">
-        <h3 class="mt-5">Recently News</h3>
-        <div class="row justify-content-around mt-3 pt-2">
-            <!-- looping starting  -->
-            <div class="col-lg-3 col-md-6 m-1 p-1" style="border: 1px solid black;  border-radius: 10px;">
-                <div class="card-img">
-                    <img src="../img/img2.jpeg" alt="new-pic" width="260px" height="140px">
-                </div>
-                <div class="news-card-p text-center">
-                    <a href="">
-                        <h5>News Heading</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </a>
-                </div>
-                <div class="news-card-date">
-                  <small>21/04/2024</small>
-                </div>
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-md-4"> <h3>Recently News</h3></div>
             </div>
-            <div class="col-lg-3 col-md-6 m-1 p-1" style="border: 1px solid black;  border-radius: 10px;">
-                <div class="card-img">
-                    <img src="../img/img2.jpeg" alt="new-pic" width="260px" height="140px">
+           
+            <div class="row justify-content-around mt-3 pt-2">
+                <!-- looping starting  -->
+                 <!-- php code start  -->
+                    <?php
+                        include '../db/datafetch.php';
+                        foreach($data as $row){
+                            $id = $row['post-no'];
+                            $img  = $row['img'] ;
+                            $title  = $row['title'] ;
+                            $news  = $row['detail'] ;
+                            $date  = $row['date'] ; 
+                        ?>
+
+                <div class="col-lg-3 col-md-5 m-1 p-1" style="border: 1px solid black;  border-radius: 10px;">
+                   <div class="row">
+                        <div class="card-img">
+                            <img src="../img/<?php echo $img; ?>" alt="new-pic" width="260px" height="140px">
+                        </div>
+                        <div class="news-card-p mt-1 text-center">
+                            <a href="news.php?name=<?php echo $id;?>">
+                                <p><?php echo $title; ?></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" row news-card-date">
+                        <div class="col"><small><?php echo $date; ?></small></div>
+                    </div>
                 </div>
-                <div class="news-card-p text-center">
-                    <a href="">
-                        <h5>News Heading</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </a>
-                </div>
-                <div class="news-card-date">
-                  <small>21/04/2024</small>
-                </div>
+                <?php } ?>
+                <!-- end php code -->
+                <!-- loop end -->
             </div>
-            <div class="col-lg-3 col-md-6 m-1 p-1" style="border: 1px solid black;  border-radius: 10px;">
-                <div class="card-img">
-                    <img src="../img/img2.jpeg" alt="new-pic" width="260px" height="140px">
-                </div>
-                <div class="news-card-p text-center">
-                    <a href="">
-                        <h5>News Heading</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </a>
-                </div>
-                <div class="news-card-date">
-                  <small>21/04/2024</small>
-                </div>
-            </div>
-            
-            <!-- loop end -->
         </div>
-    </div>
-
-
-        <!-- <div class="container">
-        <h3 class="text-dark">Recently News</h3>
-            <div class="row" id="accordion">
-                <div class="col-md-6 ">
-                    <div class="card">
-                    <div class="card-header">
-                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                        News heading #1
-                        </a>
-                    </div>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                        <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-md-6 ">
-                    <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                        News heading #2
-                    </a>
-                    </div>
-                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 ">
-                    <div class="card">
-                    <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                        News heading #3
-                        </a>
-                    </div>
-                    <div id="collapseThree" class="collapse" data-parent="#accordion">
-                        <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div> -->
     </section>
 
+               
     <!-- Subscribe form section -->
     <section>
         <div class="contaioner m-2">
             <div class="row text-center justify-content-around">
                 <div class="col-md-5">
-                    <form action="" class="subscribe-form">
+                    <form action="../db/subscribe.php" method ="POST" class="subscribe-form" id="subscribe-form">
                         <input type="email" name="subscriber-email" placeholder="Email" required>
                         <button  type="submit">Subscribe</button>
                     </form>
                 </div>
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="alert alert-success alert-dismissible fade show">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                         <strong>Success!</strong> 
@@ -250,7 +177,7 @@
                         <strong>Danger!</strong> 
                     </div>
                       
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -286,6 +213,47 @@
     
     <!-- Footer Section Code -->
     <?php include '../component/footer.php' ?>
+
+
+    <script>
+          document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Submit the form data using AJAX
+        var form = this;
+        var formData = new FormData(form);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action, true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 400) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.status === 'success') {
+                    // Show success message
+                    alert(response.message);
+                    // Optionally, you can redirect the user to another page
+                    // window.location.href = 'success.html';
+                    form.reset(); // Clear the form
+                } else {
+                    // Show error message
+                    alert(response.message);
+                }
+            } else {
+                // Show error message
+                alert('Error: Server returned status ' + xhr.status);
+            }
+        };
+
+        xhr.onerror = function() {
+            // Show error message
+            alert('Error: Request failed');
+        };
+
+        xhr.send(formData);
+    });
+    </script>
 
 </body>
 </html>

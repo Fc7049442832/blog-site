@@ -19,19 +19,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Prepare an INSERT statement
-    $sql = $conn->prepare("INSERT INTO `post-table`(`postNo`, `type`, `title`, `date`, `detail`, `img`, `user`) 
-    VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $sql = $conn->prepare("INSERT INTO `post-table`(`id`,`postno`, `type`, `title`, `date`, `detail`, `img`, `user`) 
+    VALUES (?,?, ?, ?, ?, ?, ?, ?)");
 
     $user ="all";
 
     //Bind  parameters
-    $sql ->bindParam(1, $newsId);
-    $sql ->bindParam(2, $type);
-    $sql ->bindParam(3, $title);
-    $sql ->bindParam(4, $date);
-    $sql ->bindParam(5, $news);
-    $sql ->bindparam(6, $img);
-    $sql ->bindParam(7, $user);
+    $sql ->bindParam(1, $id);
+    $sql ->bindParam(2, $newsId);
+    $sql ->bindParam(3, $type);
+    $sql ->bindParam(4, $title);
+    $sql ->bindParam(5, $date);
+    $sql ->bindParam(6, $news);
+    $sql ->bindparam(7, $img);
+    $sql ->bindParam(8, $user);
 
     // Execute the statement
     if($sql->execute()){
